@@ -51,3 +51,42 @@ View(flights)
 ```
 
 Answer: B. Data on a flight
+
+### LC1.4
+
+What are some other examples in this dataset of categorical variables? What makes them different than quantitative variables?
+
+```{r lc1.4}
+
+glimpse(flights)
+
+```
+categorical variables: `carrier`, `tailnum`, `origin`, `dest`.
+
+Categorical variables represent groups or labels, while quantitative variables represent measurable quantities with numbers. Categorical variables categorize data into groups, while quantitative variables are about numerical values or measurements.  
+
+Categorical variables represent categories or groups. They have finite, distinct values that classify data into groups or labels. These variables can be nominal, where the categories don’t have an inherent order (like colors or types of fruits), or ordinal, where there's a specific order among the categories (like education level or socio-economic status).  
+
+On the other hand, quantitative variables represent measurable quantities and can be expressed numerically. These variables can be discrete, taking on specific integer values (like number of siblings), or continuous, representing a range of values within a certain interval (like height or weight).
+
+### LC1.5
+
+What properties of each airport do the variables lat, lon, alt, tz, dst, and tzone describe in the airports data frame? Take your best guess.
+
+|var  | guess       |
+|-----| ------------|
+|lat  | latitude    |
+|lon  | longitude   |
+|alt  | altitude    |
+|tz   | timezone    |
+|dst  | distance    |
+|tzone| timezone?   |
+
+### LC1.6
+
+Provide the names of variables in a data frame with at least three variables where one of them is an identification variable and the other two are not. Further, create your own tidy data frame that matches these conditions.
+
+```{r lc1.6}
+
+```
+
