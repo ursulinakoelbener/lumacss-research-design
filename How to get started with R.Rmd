@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Repeat the earlier installation steps, but for the dplyr, nycflights13, and knitr packages. This will install the earlier mentioned dplyr package for data wrangling, the nycflights13 package containing data on all domestic flights leaving a NYC airport in 2013, and the knitr package for generating easy-to-read tables in R. We’ll use these packages in the next section.
 
-```{r lc1.1}
+```{r lc1.1, warning = FALSE}
 # install.packages("ggplot2")
 # install.packages("dplyr")
 # install.packages("nycflights13")
@@ -27,7 +27,7 @@ Repeat the earlier installation steps, but for the dplyr, nycflights13, and knit
 
 “Load” the dplyr, nycflights13, and knitr packages as well by repeating the earlier steps.
 
-```{r lc1.2}
+```{r lc1.2, warning = FALSE, message = FALSE}
 
 library(dplyr)
 library(nycflights13)
@@ -44,7 +44,7 @@ B. Data on a flight
 C. Data on an airport  
 D. Data on multiple flights  
 
-```{r lc1.3}
+```{r lc1.3, warning = FALSE}
 
 View(flights)
 
@@ -56,7 +56,7 @@ Answer: B. Data on a flight
 
 What are some other examples in this dataset of categorical variables? What makes them different than quantitative variables?
 
-```{r lc1.4}
+```{r lc1.4, warning = FALSE}
 
 glimpse(flights)
 
@@ -86,7 +86,33 @@ What properties of each airport do the variables lat, lon, alt, tz, dst, and tzo
 
 Provide the names of variables in a data frame with at least three variables where one of them is an identification variable and the other two are not. Further, create your own tidy data frame that matches these conditions.
 
-```{r lc1.6}
+```{r lc1.6, warning = FALSE}
+
+View(airports)
+df_airports <- data.frame(
+  faa = airports$faa,
+  alt = airports$alt,
+  tz = airports$tz)
+
+head(df_airports)
 
 ```
 
+### LC1.7
+
+Look at the help file for the airports data frame. Revise your earlier guesses about what the variables lat, lon, alt, tz, dst, and tzone each describe.
+
+```{r lc1.7, warning = FALSE, message = FALSE, results = FALSE}
+
+?airports
+
+```
+
+|var  | description       |
+|-----| ------------|
+|lat  | latitude, Location of airport.    |
+|lon  | longitude, Location of airport.   |
+|alt  | Altitude, in feet.    |
+|tz   | Timezone offset from GMT.    |
+|dst  | Daylight savings time zone. A = Standard US DST: starts on the second Sunday of March, ends on the first Sunday of November. U = unknown. N = no dst.    |
+|tzone| IANA time zone, as determined by GeoNames webservice.   |
