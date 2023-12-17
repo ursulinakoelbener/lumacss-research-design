@@ -1,0 +1,53 @@
+---
+title: "How to get started with R"
+author: "Ursulina Kölbener"
+date: "2023-12-17"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercise 1
+
+### LC1.1
+
+Repeat the earlier installation steps, but for the dplyr, nycflights13, and knitr packages. This will install the earlier mentioned dplyr package for data wrangling, the nycflights13 package containing data on all domestic flights leaving a NYC airport in 2013, and the knitr package for generating easy-to-read tables in R. We’ll use these packages in the next section.
+
+```{r lc1.1}
+# install.packages("ggplot2")
+# install.packages("dplyr")
+# install.packages("nycflights13")
+# install.packages("knitr")
+
+```
+
+### LC1.2
+
+“Load” the dplyr, nycflights13, and knitr packages as well by repeating the earlier steps.
+
+```{r lc1.2}
+
+library(dplyr)
+library(nycflights13)
+library(knitr)
+
+```
+
+### LC1.3
+
+What does any ONE row in this flights dataset refer to?
+
+A. Data on an airline  
+B. Data on a flight  
+C. Data on an airport  
+D. Data on multiple flights  
+
+```{r lc1.3}
+
+View(flights)
+
+```
+
+Answer: B. Data on a flight
